@@ -1,3 +1,9 @@
+"""
+Student Name: Ash Hoskins, Student #S559245
+Course: CSIS 44-609 - Data Analytics Fundamentals
+Professor Denise Case
+Module 2 - Discussion: Engage Practice with Pandas
+"""
 import pandas as pd
 
 d1 = {'FirstSet': pd.Series([10, 11, 14, 20, 20, 20, 22, 24, 28, 31])}
