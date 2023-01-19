@@ -4,7 +4,7 @@ Course: CSIS 44-609 - Data Analytics Fundamentals
 Professor Denise Case
 Module 2: Assignment 1 Task 3.
 
-Results from Terminal for user_math.py
+Output file: Results from Terminal for user_math.py
 
 PS C:\Users\Hoski\Desktop\NWMS\GIT\datafun-02-functions\datafun-02-functions> & C:/Users/Hoski/miniconda3/python.exe c:/Users/Hoski/Desktop/NWMS/GIT/datafun-02-functions/datafun-02-functions/user_math.py
 Explore some functions in the math module
