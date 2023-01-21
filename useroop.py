@@ -12,6 +12,7 @@ utilizes class objects to display the information in a presentable way.
 WARNING: This script utilizes Inheritence from user_math.py from Task 3. To satisfy import math requirement
 The method haversine is imported to the script in order to calculate the great circle path. 
 Data Reference from: https://volcano.si.edu/gvp_currenteruptions.cfm
+Haversine Formula: https://en.wikipedia.org/wiki/Haversine_formula
 """
 # Import of libraries and methods
 import datetime
