@@ -15,6 +15,7 @@ import math
 
 # define some functions
 
+
 def get_area_of_lot(length, width):
     """
     Return area of a lot given the length and width of the lot.
@@ -23,10 +24,10 @@ def get_area_of_lot(length, width):
 
     """
 
-    # Use a try / except / finally block when something 
+    # Use a try / except / finally block when something
     # could go wrong
-    try: 
-        area = length * width # Corrected for Task 3, Step 6 (Part A)
+    try:
+        area = length * width  # Corrected for Task 3, Step 6 (Part A)
         return area
     except Exception as ex:
         print(f"Error: {ex}")
@@ -43,30 +44,36 @@ def DtoR(long, lat):
     except Exception as ex:
         print(f"Error: {ex}")
         return None
+
+
 # Haversine formula for calculating great-circle distance between two points on a sphere.
 # Calculates the shortest distance over the Earth's Surface following a great-circle path.
-def Haversine(long2, lat2) :
+def Haversine(long2, lat2):
     try:
-        r = round(63710000/10)
+        r = round(63710000 / 10)
         nwmslong = 40.3520
         nwmslat = 94.8825
-        
-        theta1 = lat2 * math.pi/180
-        theta2  = nwmslat * math.pi/180
-        alphaphi = (lat2 - nwmslat) * math.pi/180
-        alphalambda = (long2 - nwmslong) * math.pi/180
 
-        a = math.sin(alphaphi/2) * math.sin(alphaphi/2) + math.cos(theta1) * math.cos(theta2) * math.sin(alphalambda/2) * math.sin(alphalambda/2)
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+        theta1 = lat2 * math.pi / 180
+        theta2 = nwmslat * math.pi / 180
+        alphaphi = (lat2 - nwmslat) * math.pi / 180
+        alphalambda = (long2 - nwmslong) * math.pi / 180
+
+        a = math.sin(alphaphi / 2) * math.sin(alphaphi / 2) + math.cos(
+            theta1
+        ) * math.cos(theta2) * math.sin(alphalambda / 2) * math.sin(alphalambda / 2)
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         Distance = r * c
-        return Distance   
+        return Distance
     except Exception as ex:
         print(f"Error: {ex}")
         return None
-#Simply converts meters to miles.       
-def meterstomiles(meters) :
+
+
+# Simply converts meters to miles.
+def meterstomiles(meters):
     try:
-        miles = meters * .00062137
+        miles = meters * 0.00062137
         return miles
     except Exception as ex:
         print(f"Error: {ex}")
@@ -89,12 +96,22 @@ if __name__ == "__main__":
     print(f"math.perm(5,1) = {math.perm(5,1)}")
     print()
 
-    #Printing and calling functions within the domain for the Module assignment.
-    print("The Location of the Lascar Volcano in Chile is: 23.37 degrees south,  67.73 degrees west")
-    print("The Coordinates in radians is: ", DtoR(23.37,67.73))
-    #Places haversine results into variable for miles converstion
-    zx = round(Haversine(23.37, 67.73),)
-    print("The Great Spherical Distance of The Lascar Volcano to NWMS University is: ",zx, " Meters or",round(meterstomiles(zx), 2), " Miles" )
+    # Printing and calling functions within the domain for the Module assignment.
+    print(
+        "The Location of the Lascar Volcano in Chile is: 23.37 degrees south,  67.73 degrees west"
+    )
+    print("The Coordinates in radians is: ", DtoR(23.37, 67.73))
+    # Places haversine results into variable for miles converstion
+    zx = round(
+        Haversine(23.37, 67.73),
+    )
+    print(
+        "The Great Spherical Distance of The Lascar Volcano to NWMS University is: ",
+        zx,
+        " Meters or",
+        round(meterstomiles(zx), 2),
+        " Miles",
+    )
 
-    #Module 2, Task 3, Step 2 (Part B) - Calling method/function with values 6,2
-    print("The Area of the Lot is: ", get_area_of_lot(6,2))
+    # Module 2, Task 3, Step 2 (Part B) - Calling method/function with values 6,2
+    print("The Area of the Lot is: ", get_area_of_lot(6, 2))
