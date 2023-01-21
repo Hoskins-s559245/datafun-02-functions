@@ -2,6 +2,7 @@
 Student Name: Ash Hoskins, Student #S559245
 Course: CSIS 44-609 - Data Analytics Fundamentals
 Professor Denise Case
+Domain: Geospatial data
 Module 2: Assignment 1 Task 3.
 
 This script calculates the area of a lot, utilzies math libraries for comb and perm with
@@ -9,6 +10,8 @@ the given values in the assignment. The 3 custom functions 1.) converts longitud
 2.) Utilizes the haversine formula to calculate the great spherical distances between the loscar volcano and
 Northwest Missouri State University Campus. 3.) Converts haversine results from meters to miles.
 
+Data Reference from: https://volcano.si.edu/gvp_currenteruptions.cfm
+Haversine Formula: https://en.wikipedia.org/wiki/Haversine_formula
 """
 
 import math
